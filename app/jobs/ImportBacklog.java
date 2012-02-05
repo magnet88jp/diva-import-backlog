@@ -60,7 +60,7 @@ public class ImportBacklog extends Job {
       if(data.size() == Issue.size()) {
         // create Inquiry
         Inquiry inquiry = null;
-        List<Inquiry> inquirys = Inquiry.find("byCode", data.get("kay")).fetch();
+        List<Inquiry> inquirys = Inquiry.find("byCode", data.get("key")).fetch();
         if(inquirys.size() == 0) {
           inquiry = new Inquiry(data.get("key"), data.get("summary"), data.get("description"), "");
         } else {
